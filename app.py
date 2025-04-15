@@ -32,8 +32,8 @@ def submit():
 
     return redirect(url_for('index'))
 
-@app.route('/search_ajax', methods=['GET'])
-def search_ajax():
+@app.route('/search', methods=['GET'])
+def search():
     search_name = request.args.get('search_name')
     user = users_collection.find_one({'name': search_name})
 
